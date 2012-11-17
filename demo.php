@@ -3,10 +3,13 @@
 
 	if( !empty($_POST) )
 	{
-		$arrPost_Clean['startLat'] = filter_input( INPUT_POST, 'startLat', FILTER_SANITIZE_NUMBER_FLOAT);
-		$arrPost_Clean['startLong'] = filter_input( INPUT_POST, 'startLong', FILTER_SANITIZE_NUMBER_FLOAT);
-		$arrPost_Clean['endLat'] = filter_input( INPUT_POST, 'endLat', FILTER_SANITIZE_NUMBER_FLOAT);
-		$arrPost_Clean['endLong'] = filter_input( INPUT_POST, 'endLong', FILTER_SANITIZE_NUMBER_FLOAT);
+
+		$arrFilterOptions['flags'] = 'FILTER_FLAG_ALLOW_FRACTION';
+
+		$arrPost_Clean['startLat'] = filter_input( INPUT_POST, 'startLat', FILTER_SANITIZE_NUMBER_FLOAT, $arrFilterOptions);
+		$arrPost_Clean['startLong'] = filter_input( INPUT_POST, 'startLong', FILTER_SANITIZE_NUMBER_FLOAT, $arrFilterOptions);
+		$arrPost_Clean['endLat'] = filter_input( INPUT_POST, 'endLat', FILTER_SANITIZE_NUMBER_FLOAT, $arrFilterOptions);
+		$arrPost_Clean['endLong'] = filter_input( INPUT_POST, 'endLong', FILTER_SANITIZE_NUMBER_FLOAT, $arrFilterOptions);
 
 		foreach( $arrPost_Clean as $strKey => $mxdValue )
 		{

@@ -36,12 +36,6 @@
 			$this->setEndLat($endLat);
 			$this->setEndLong($endLong);
 
-			echo $startLat.'<br />';
-			echo $startLong.'<br />';
-			echo $endLat.'<br />';
-			echo $endLong.'<br />';
-
-
 			$this->setRadians();
 			$this->setLatDiffInRad();
 			$this->setLongDiffInRad();
