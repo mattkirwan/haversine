@@ -19,9 +19,9 @@
 		$objHaversine = new Haversine;
 		$distance = $objHaversine->getDistance($arrPost_Clean['startLat'], $arrPost_Clean['startLong'], $arrPost_Clean['endLat'], $arrPost_Clean['endLong'])
 		?>
-		--------------------<br />
-		Distance: <?php echo $distance;?>
-		--------------------<br />
+		----------------------------------------<br />
+		Distance: <?php echo $distance;?><br />
+		----------------------------------------<br />
 		<?php
 
 	}
@@ -32,13 +32,13 @@
 		<label form="startLat">Start Lat</label>
 		<input type="text" name="startLat" value="" />
 
-		<label form="startLat">Start Long</label>
+		<label form="startLong">Start Long</label>
 		<input type="text" name="startLong" value="" />
 
-		<label form="startLat">End Lat</label>
+		<label form="endLat">End Lat</label>
 		<input type="text" name="endLat" value="" />
 
-		<label form="startLat">End Long</label>
+		<label form="endLong">End Long</label>
 		<input type="text" name="endLong" value="" />
 
 		<input type="submit" value="Get Distance" />
