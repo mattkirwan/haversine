@@ -2,8 +2,8 @@
 
 	class Haversine
 	{
-		private $radian = M_PI / 180;
-		private $sphereRadius = 6372.797; // Earth
+		private $radian;
+		private $sphereRadius;
 
 		private $startLatDeg;
 		private $startLongDeg;
@@ -22,6 +22,12 @@
 		private $orthodromicDistance;
 
 		public $distance;
+
+		public function __construct()
+		{
+			$this->radian = M_PI / 180;
+			$this->sphereRadius = 6372.797; // Earth Radius in Kilometres
+		}
 
 		public function getDistance($startLat, $startLong, $endLat, $endLong)
 		{
