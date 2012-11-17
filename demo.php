@@ -4,7 +4,7 @@
 	if( !empty($_POST) )
 	{
 
-		$arrFilterOptions['flags'] = 'FILTER_FLAG_ALLOW_FRACTION';
+		$arrFilterOptions['flags'] = FILTER_FLAG_ALLOW_FRACTION;
 
 		$arrPost_Clean['startLat'] = filter_input( INPUT_POST, 'startLat', FILTER_SANITIZE_NUMBER_FLOAT, $arrFilterOptions);
 		$arrPost_Clean['startLong'] = filter_input( INPUT_POST, 'startLong', FILTER_SANITIZE_NUMBER_FLOAT, $arrFilterOptions);
