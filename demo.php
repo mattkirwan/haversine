@@ -17,11 +17,11 @@
 		}
 
 		$objHaversine = new Haversine;
-		$objHaversine->getDistance($arrPost_Clean['startLat'], $arrPost_Clean['startLong'], $arrPost_Clean['endLat'], $arrPost_Clean['endLong'])
+		$distance = $objHaversine->getDistance($arrPost_Clean['startLat'], $arrPost_Clean['startLong'], $arrPost_Clean['endLat'], $arrPost_Clean['endLong'])
 		?>
-		--------------------<br />;
+		--------------------<br />
 		Distance: <?php echo $distance;?>
-		--------------------<br />;
+		--------------------<br />
 		<?php
 
 	}
