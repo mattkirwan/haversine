@@ -1,5 +1,4 @@
 <?php
-	include 'haversine.php';
 
 	if( !empty($_POST) )
 	{
@@ -19,13 +18,10 @@
 			}
 		}
 
+		// Basic Usage
+		include 'haversine.php';
 		$objHaversine = new Haversine;
-
 		$distance = $objHaversine->getDistance($arrPost_Clean['startLat'], $arrPost_Clean['startLong'], $arrPost_Clean['endLat'], $arrPost_Clean['endLong']);
-		
-		echo '<pre>';
-		print_r($objHaversine);
-		echo '</pre>';
 
 		?>
 		----------------------------------------<br />
@@ -40,16 +36,16 @@
 		<legend>Haversine - Demo</legend>
 		<label form="startLat">Start Lat</label>
 		<input type="text" name="startLat" value="" />
-
+		<br />
 		<label form="startLong">Start Long</label>
 		<input type="text" name="startLong" value="" />
-
+		<br />
 		<label form="endLat">End Lat</label>
 		<input type="text" name="endLat" value="" />
-
+		<br />
 		<label form="endLong">End Long</label>
 		<input type="text" name="endLong" value="" />
-
+		<br />
 		<input type="submit" value="Get Distance" />
 	</fieldset>
 </form>
