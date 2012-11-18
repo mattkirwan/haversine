@@ -59,7 +59,7 @@
 			$this->startLatDeg = $startLat;
 		}
 
-		public function setStartLong($startLat = null)
+		public function setStartLong($startLong = null)
 		{
 			$this->startLongDeg = $startLong;
 		}
