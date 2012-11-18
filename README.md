@@ -18,7 +18,7 @@ $objHaversine = new Haversine;
 ```
 Call the getDistance() method, passing to it four arguments:
 ```php
-$objHaversine->getDistance(startLat, startLong, endLat, endLong);
+$objHaversine->getDistance($startLat, $startLong, $endLat, $endLong);
 ```
 
 ## Demo
